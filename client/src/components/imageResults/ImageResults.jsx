@@ -29,7 +29,6 @@ export const ImageResults = ({listOfImages, isLoading, error}) => {
             ) : (
               <ImageCard image={listOfImages} />
             )
-            // )
           }
         </div>
       </div>

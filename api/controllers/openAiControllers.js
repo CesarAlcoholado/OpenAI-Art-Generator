@@ -1,5 +1,4 @@
 require("dotenv").config();
-const { Configuration, OpenAI} = require("openai");
 const axios = require ("axios") ;
 
 
@@ -20,7 +19,6 @@ const generateImage = async (req, res) => {
     };
 
     let image = await axios.request(options);
-    console.log(image.data);
 
     res.status(200).json({
       success: true,

@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const app = express();
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 //parsing application/json
 app.use(express.json());

@@ -12,9 +12,12 @@ export const Header = ({setIsLoading, setListOfImages, setError}) => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      let response = await axios.post("http://localhost:3000/openai/images", {
-        prompt: inputValue
-      });
+      let response = await axios.post(
+        "https://open-ai-art-generator-seven.vercel.app/openai/images",
+        {
+          prompt: inputValue,
+        }
+      );
       setListOfImages(response.data.message.generated_image);
       if (response.data.message.generated_image === "failed to process") setError(true);
     } catch (error) {
